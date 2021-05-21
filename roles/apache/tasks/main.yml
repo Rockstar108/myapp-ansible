@@ -1,0 +1,12 @@
+---
+# tasks file for apache
+- name: Installing apache2
+  apt:
+    name: apache2
+    state: present
+
+    #- name: enabling apache2 server
+    #service: name=apache2 state=enabled
+
+- name: start apache2 server
+  service: name=apache2 state=started
